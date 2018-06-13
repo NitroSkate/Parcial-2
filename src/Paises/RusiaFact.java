@@ -5,6 +5,9 @@
  */
 package Paises;
 
+import ConstruccionesSovieticas.*;
+
+
 /**
  *
  * @author NitroSkate <00159817@uca.edu.sv>
@@ -18,7 +21,15 @@ public class RusiaFact implements AbstractFact {
 
     @Override
     public Rusia getRusia(String t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        switch(t){
+            case "bosque":
+                return new Bosque();
+            case "mezclador":
+                return new Mezclador();
+            case "metfact":
+                return new MetFact();
+        }
+        return null;
     }
 
     @Override

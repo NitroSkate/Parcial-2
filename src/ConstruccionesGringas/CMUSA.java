@@ -7,40 +7,40 @@ package ConstruccionesGringas;
 
 import Paises.*;
 
-
 /**
  *
- * @author NitroSkate <00159817@uca.edu.sv>
+ * @author estudiante
  */
-public class Fundidora implements Eeuu{
-    public static Sourcerer Fundidora = new Sourcerer();
+public class CMUSA implements Eeuu {
+    public static Base CMUSA = new Base();
 
     @Override
     public void build(String nombre) {
-        Fundidora.setNombre(nombre);
-        Fundidora.setVida(300);
-        Fundidora.setCosto1(0);
-        Fundidora.setCosto2(0);
-        Fundidora.setFasesT(0);
-        Fundidora.setRecurso1(0);
-        Fundidora.setRecurso2(0);
-        Fundidora.setRecurso3(500);
+        CMUSA.setNombre(nombre);
+        CMUSA.setVida(0);
+        CMUSA.setCapRecurso1(0);
+        CMUSA.setCapRecurso2(0);
+        CMUSA.setCapRecurso3(0);
+        CMUSA.setCantRecurso1(0);
+        CMUSA.setCantRecurso2(0);
+        CMUSA.setCantRecurso3(0);
     }
 
     @Override
     public Sourcerer getSource() {
-        return Fundidora;
+        return null;
     }
 
     @Override
     public Base getBase() {
-        return null;
+        return CMUSA;
     }
 
     @Override
     public EAtaque getEAtaque() {
         return null;
     }
+    
     
     
 }

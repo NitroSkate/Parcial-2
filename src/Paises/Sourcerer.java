@@ -12,9 +12,15 @@ import java.util.ArrayList;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class Sourcerer implements SourPlan{
-    private int vida;
-    private int rec1,rec2,rec3,fasest, costo1, costo2;
+    private String nombre;
+    private int vida,rec1,rec2,rec3,fasest, costo1, costo2;
     public ArrayList<Sourcerer> sour = new ArrayList<>();
+    
+    @Override
+    public void setNombre(String nombre){
+        this.nombre=nombre;
+    }
+    
     @Override
     public void setVida(int vida){
         this.vida=vida;
@@ -44,6 +50,11 @@ public class Sourcerer implements SourPlan{
     @Override
     public void setRecurso3(int rec3){
         this.rec3=rec3;
+    }
+    
+    @Override
+    public String getNombre(){
+        return this.nombre;
     }
 
     @Override

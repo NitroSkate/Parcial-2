@@ -5,21 +5,40 @@
  */
 package ConstruccionesSovieticas;
 
-import Paises.Sourcerer;
-import Paises.Rusia;
+import Paises.*;
 
 /**
  *
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class Bosque implements Rusia {
-    private Sourcerer Bosque;
-    
-    public void build(){
-        this.Bosque.setVida("100");
+    public static Sourcerer Bosque = new Sourcerer();
+
+    @Override
+    public void build(String nombre) {
+        Bosque.setNombre(nombre);
+        Bosque.setVida(100);
+        Bosque.setFasesT(0);
+        Bosque.setCosto1(0);
+        Bosque.setCosto2(0);
+        Bosque.setRecurso1(0);
+        Bosque.setRecurso2(0);
+        Bosque.setRecurso3(0);
     }
-    
-    public Sourcerer getSource(){
-        return this.Bosque;
+
+    @Override
+    public Sourcerer getSource() {
+        return Bosque;
     }
+
+    @Override
+    public Base getBase() {
+        return null;
+    }
+
+    @Override
+    public EAtaque getEAtaque() {
+        return null;
+    }
+
 }

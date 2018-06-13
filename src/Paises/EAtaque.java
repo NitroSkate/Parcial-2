@@ -10,8 +10,13 @@ package Paises;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class EAtaque implements EAtaquePlan {
-    private int vida;
-    private int c1, c2, Tiempo;
+    private String nombre;
+    private int vida, c1, c2, Tiempo;
+    
+    @Override
+    public void setNombre(String nombre){
+        this.nombre=nombre;
+    }
     
     @Override
     public void setVida(int vida){
@@ -31,6 +36,11 @@ public class EAtaque implements EAtaquePlan {
     @Override
     public void setTiempoC(int Tiempo) {
         this.Tiempo=Tiempo;
+    }
+    
+    @Override
+    public String getNombre(){
+        return nombre;
     }
 
     @Override

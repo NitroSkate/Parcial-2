@@ -5,10 +5,8 @@
  */
 package ConstruccionesGringas;
 
-import Paises.Base;
-import Paises.EAtaque;
-import Paises.Eeuu;
-import Paises.Sourcerer;
+import Paises.*;
+
 
 /**
  *
@@ -18,7 +16,8 @@ public class FabricaTUSA implements Eeuu{
     public static EAtaque FabricaTUSA = new EAtaque();
     
     @Override
-    public void build() {
+    public void build(String nombre) {
+        FabricaTUSA.setNombre(nombre);
         FabricaTUSA.setVida(0);
         FabricaTUSA.setCosto1(0);
         FabricaTUSA.setCosto2(0);

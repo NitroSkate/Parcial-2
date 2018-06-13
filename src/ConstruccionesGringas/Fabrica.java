@@ -5,10 +5,8 @@
  */
 package ConstruccionesGringas;
 
-import Paises.Base;
-import Paises.EAtaque;
-import Paises.Eeuu;
-import Paises.Sourcerer;
+import Paises.*;
+
 
 /**
  *
@@ -16,11 +14,10 @@ import Paises.Sourcerer;
  */
 public class Fabrica implements Eeuu{
     public static Sourcerer Fabrica= new Sourcerer();
-    public static Sourcerer getInstance(){
-        return Fabrica;
-    }
+
     @Override
-    public void build() {
+    public void build(String nombre) {
+        Fabrica.setNombre(nombre);
         Fabrica.setVida(200);
         Fabrica.setCosto1(0);
         Fabrica.setCosto2(0);
@@ -32,7 +29,7 @@ public class Fabrica implements Eeuu{
 
     @Override
     public Sourcerer getSource() {
-        return this.Fabrica;
+        return Fabrica;
     }
 
     @Override

@@ -5,10 +5,8 @@
  */
 package ConstruccionesGringas;
 
-import Paises.Base;
-import Paises.EAtaque;
-import Paises.Eeuu;
-import Paises.Sourcerer;
+import Paises.*;
+
 
 /**
  *
@@ -16,12 +14,10 @@ import Paises.Sourcerer;
  */
 public class HQUSA implements Eeuu {
     public static EAtaque HQUSA= new EAtaque();
-    public static EAtaque getInstance(){
-        return HQUSA;
-    }
     
     @Override
-    public void build() {
+    public void build(String nombre) {
+        HQUSA.setNombre(nombre);
         HQUSA.setVida(100);
         HQUSA.setCosto1(0);
         HQUSA.setCosto2(0);
@@ -40,7 +36,7 @@ public class HQUSA implements Eeuu {
 
     @Override
     public EAtaque getEAtaque() {
-        return this.HQUSA;
+        return HQUSA;
     }
     
 }

@@ -10,6 +10,7 @@ package Paises;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public interface BasePlan {
+    public void setNombre(String nombre);
     public void setVida(int vida);
     public void setCantRecurso1(int crec1);
     public void setCantRecurso2(int crec2);
@@ -18,6 +19,7 @@ public interface BasePlan {
     public void setCapRecurso2(int cprec2);
     public void setCapRecurso3(int cprec3);
     
+    public String getNombre();
     public int getVida();
     public int getCantRecurso1();
     public int getCantRecurso2();

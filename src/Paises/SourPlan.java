@@ -11,6 +11,7 @@ package Paises;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public interface SourPlan {
+    public void setNombre(String nombre);
     public void setVida(int vida);
     public void setFasesT(int fasest);
     public void setCosto1(int costo1);
@@ -19,6 +20,7 @@ public interface SourPlan {
     public void setRecurso2(int rec2);
     public void setRecurso3(int rec3);
     
+    public String getNombre();
     public int getVida();
     public int getFasesT();
     public int getCosto1();

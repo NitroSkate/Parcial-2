@@ -5,9 +5,8 @@
  */
 package Paises;
 
-import ConstruccionesGringas.Aserradero;
-import ConstruccionesGringas.Fabrica;
-import ConstruccionesGringas.Fundidora;
+import ConstruccionesGringas.*;
+
 
 /**
  *
@@ -17,12 +16,20 @@ public class EeuuFact implements AbstractFact{
     @Override
     public Eeuu getEeuu(String t) {
         switch(t){
-            case "Aserradero":
+            case "aserradero":
                 return new Aserradero();
             case "fabrica":
                 return new Fabrica();
             case "fundidora":
                 return new Fundidora();
+            case "aeropuertousa":
+                return new AeropuertoUSA();
+            case "cmusa":
+                return new CMUSA();
+            case "fabricatusa":
+                return new FabricaTUSA();
+            case "hqusa":
+                return new HQUSA();
         }
         return null;
     }

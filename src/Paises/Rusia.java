@@ -10,5 +10,8 @@ package Paises;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public interface Rusia{
-
+    public void build(String nombre);
+    public Sourcerer getSource();
+    public Base getBase();
+    public EAtaque getEAtaque();
 }

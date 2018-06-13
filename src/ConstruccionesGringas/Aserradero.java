@@ -5,10 +5,8 @@
  */
 package ConstruccionesGringas;
 
-import Paises.Base;
-import Paises.EAtaque;
-import Paises.Eeuu;
-import Paises.Sourcerer;
+import Paises.*;
+
 
 /**
  *
@@ -18,7 +16,8 @@ public class Aserradero implements Eeuu {
     public static Sourcerer Aserradero= new Sourcerer();
 
     @Override
-    public void build(){
+    public void build(String nombre){
+        Aserradero.setNombre(nombre);
         Aserradero.setVida(100);
         Aserradero.setCosto1(0);
         Aserradero.setCosto2(0);

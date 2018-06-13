@@ -5,6 +5,8 @@
  */
 package ConstruccionesSovieticas;
 
+import Paises.Base;
+import Paises.EAtaque;
 import Paises.Sourcerer;
 import Paises.Rusia;
 
@@ -13,13 +15,33 @@ import Paises.Rusia;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class MetFact implements Rusia {
-    private Sourcerer MetFact;
-    
-    public void build(){
-        this.MetFact.setVida("300");
+    public static Sourcerer MetFact = new Sourcerer();
+
+    @Override
+    public void build(String nombre) {
+        MetFact.setNombre(nombre);
+        MetFact.setVida(300);
+        MetFact.setFasesT(0);
+        MetFact.setCosto1(0);
+        MetFact.setCosto2(0);
+        MetFact.setRecurso1(0);
+        MetFact.setRecurso2(0);
+        MetFact.setRecurso3(0);
+    }
+
+    @Override
+    public Sourcerer getSource() {
+        return MetFact;
+    }
+
+    @Override
+    public Base getBase() {
+        return null;
+    }
+
+    @Override
+    public EAtaque getEAtaque() {
+        return null;
     }
     
-    public Sourcerer getSource(){
-        return this.MetFact;
-    }
 }

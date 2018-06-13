@@ -5,10 +5,8 @@
  */
 package ConstruccionesGringas;
 
-import Paises.Base;
-import Paises.EAtaque;
-import Paises.Eeuu;
-import Paises.Sourcerer;
+import Paises.*;
+
 
 /**
  *
@@ -16,24 +14,30 @@ import Paises.Sourcerer;
  */
 public class AeropuertoUSA implements Eeuu{
 
+    public static EAtaque AeropuertoUSA = new EAtaque();
+    
     @Override
-    public void build() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void build(String nombre) {
+        AeropuertoUSA.setNombre(nombre);
+        AeropuertoUSA.setVida(0);
+        AeropuertoUSA.setCosto1(0);
+        AeropuertoUSA.setCosto2(0);
+        AeropuertoUSA.setTiempoC(0);
     }
 
     @Override
     public Sourcerer getSource() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
     }
 
     @Override
     public Base getBase() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
     }
 
     @Override
     public EAtaque getEAtaque() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return AeropuertoUSA;
     }
     
 }

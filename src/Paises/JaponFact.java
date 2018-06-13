@@ -5,9 +5,8 @@
  */
 package Paises;
 
-import ConstruccionesNiponas.Herradero;
-import ConstruccionesNiponas.Maquila;
-import ConstruccionesNiponas.Taladero;
+import ConstruccionesNiponas.*;
+
 
 /**
  *
@@ -17,11 +16,11 @@ public class JaponFact implements AbstractFact{
     @Override
     public Japon getJapon(String t){
         switch(t){
-            case "Taladero":
+            case "taladero":
                 return new Taladero();
-            case "Maquila":
+            case "maquila":
                 return new Maquila();
-            case "Herradero":
+            case "herradero":
                 return new Herradero();
         }
         return null;

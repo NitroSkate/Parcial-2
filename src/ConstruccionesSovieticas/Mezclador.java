@@ -5,6 +5,8 @@
  */
 package ConstruccionesSovieticas;
 
+import Paises.Base;
+import Paises.EAtaque;
 import Paises.Sourcerer;
 import Paises.Rusia;
 
@@ -13,13 +15,34 @@ import Paises.Rusia;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class Mezclador implements Rusia {
-    private Sourcerer Mezclador;
-    
-    public void build(){
-        this.Mezclador.setVida("200");
+    public static Sourcerer Mezclador = new Sourcerer();
+
+    @Override
+    public void build(String nombre) {
+        Mezclador.setNombre(nombre);
+        Mezclador.setVida(200);
+        Mezclador.setFasesT(0);
+        Mezclador.setCosto1(0);
+        Mezclador.setCosto2(0);
+        Mezclador.setRecurso1(0);
+        Mezclador.setRecurso2(0);
+        Mezclador.setRecurso3(0);
+    }
+
+    @Override
+    public Sourcerer getSource() {
+        return Mezclador;
+    }
+
+    @Override
+    public Base getBase() {
+        return null;
+    }
+
+    @Override
+    public EAtaque getEAtaque() {
+        return null;
     }
     
-    public Sourcerer getSource(){
-        return this.Mezclador;
-    }
+
 }

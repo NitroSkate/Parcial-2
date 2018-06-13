@@ -5,6 +5,8 @@
  */
 package ConstruccionesNiponas;
 
+import Paises.Base;
+import Paises.EAtaque;
 import Paises.Japon;
 import Paises.Sourcerer;
 
@@ -13,13 +15,32 @@ import Paises.Sourcerer;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class Maquila implements Japon {
-    private Sourcerer Maquila;
+    public static Sourcerer Maquila = new Sourcerer();
     
-    public void build(){
-        this.Maquila.setVida("200");
+    @Override
+    public void build(String nombre){
+        Maquila.setNombre(nombre);
+        Maquila.setVida(200);
+        Maquila.setFasesT(0);
+        Maquila.setCosto1(0);
+        Maquila.setCosto2(0);
+        Maquila.setRecurso1(0);
+        Maquila.setRecurso2(0);
+        Maquila.setRecurso3(0);
     }
     
+    @Override
     public Sourcerer getSource(){
-        return this.Maquila;
+        return Maquila;
+    }
+
+    @Override
+    public Base getBase() {
+        return null;
+    }
+
+    @Override
+    public EAtaque getEAtaque() {
+        return null;
     }
 }

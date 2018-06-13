@@ -5,6 +5,8 @@
  */
 package ConstruccionesNiponas;
 
+import Paises.Base;
+import Paises.EAtaque;
 import Paises.Japon;
 import Paises.Sourcerer;
 
@@ -13,14 +15,33 @@ import Paises.Sourcerer;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class Taladero implements Japon {
-    private Sourcerer Taladero;
+    public static Sourcerer Taladero = new Sourcerer();
     
-    public void build(){
-        this.Taladero.setVida("100");
+    @Override
+    public void build(String nombre){
+        Taladero.setNombre(nombre);
+        Taladero.setVida(100);
+        Taladero.setFasesT(0);
+        Taladero.setCosto1(0);
+        Taladero.setCosto2(0);
+        Taladero.setRecurso1(0);
+        Taladero.setRecurso2(0);
+        Taladero.setRecurso3(0);
     }
     
+    @Override
     public Sourcerer getSource(){
-        return this.Taladero;
+        return Taladero;
+    }
+
+    @Override
+    public Base getBase() {
+        return null;
+    }
+
+    @Override
+    public EAtaque getEAtaque() {
+        return null;
     }
     
 }

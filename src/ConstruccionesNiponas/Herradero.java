@@ -5,22 +5,41 @@
  */
 package ConstruccionesNiponas;
 
-import Paises.Japon;
-import Paises.Sourcerer;
+import Paises.*;
+
 
 /**
  *
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class Herradero implements Japon {
-    private Sourcerer Herradero;
+    public static Sourcerer Herradero = new Sourcerer();
     
-    public void build(){
-        this.Herradero.setVida("300");
+    @Override
+    public void build(String nombre){
+        Herradero.setNombre(nombre);
+        Herradero.setVida(300);
+        Herradero.setFasesT(0);
+        Herradero.setCosto1(0);
+        Herradero.setCosto2(0);
+        Herradero.setRecurso1(0);
+        Herradero.setRecurso2(0);
+        Herradero.setRecurso3(0);
     }
     
+    @Override
     public Sourcerer getSource(){
-        return this.Herradero;
+        return Herradero;
+    }
+
+    @Override
+    public Base getBase() {
+        return null;
+    }
+
+    @Override
+    public EAtaque getEAtaque() {
+        return null;
     }
     
 }

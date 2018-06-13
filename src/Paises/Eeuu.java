@@ -10,7 +10,7 @@ package Paises;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public interface Eeuu{
-    public void build();
+    public void build(String nombre);
     public Sourcerer getSource();
     public Base getBase();
     public EAtaque getEAtaque();

@@ -10,8 +10,13 @@ package Paises;
  * @author NitroSkate <00159817@uca.edu.sv>
  */
 public class Base implements BasePlan {
-    private int vida;
-    private int crec1, crec2, crec3, cprec1, cprec2, cprec3;
+    private String nombre;
+    private int vida, crec1, crec2, crec3, cprec1, cprec2, cprec3;
+    
+    @Override
+    public void setNombre(String nombre){
+        this.nombre=nombre;
+    }
     
     @Override
     public void setVida(int vida){
@@ -33,6 +38,11 @@ public class Base implements BasePlan {
         this.crec3=crec3;
     }
 
+    @Override 
+    public String getNombre(){
+        return nombre;
+    }
+    
     @Override
     public int getVida() {
         return vida;
