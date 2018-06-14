@@ -5,10 +5,35 @@
  */
 package ConstruccionesNiponas;
 
+import Paises.Base;
+import Paises.EAtaque;
+import Paises.Japon;
+import Paises.Sourcerer;
+
 /**
  *
  * @author estudiante
  */
-public class HQJAP {
-    
+public class HQJAP implements Japon {
+    public static EAtaque HQJAP = new EAtaque();
+
+    @Override
+    public void build(String nombre) {
+        HQJAP.setNombre(nombre);
+    }
+
+    @Override
+    public Sourcerer getSource() {
+        return null;
+    }
+
+    @Override
+    public Base getBase() {
+        return null;
+    }
+
+    @Override
+    public EAtaque getEAtaque() {
+        return HQJAP;
+    }
 }
