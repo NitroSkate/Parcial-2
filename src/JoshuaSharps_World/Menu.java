@@ -105,7 +105,7 @@ public class Menu {
             boolean J1=true, J2=true;
             System.out.println("");
             System.out.println("-----------Fase " +fase+ " -----------");
-            System.out.println("-------Empieza " +p1n+" ---------");
+            System.out.println("-------Turno de " +p1n+" ---------");
             while(J1){
                 int opc;
                 Scanner in = new Scanner(System.in);
@@ -129,7 +129,7 @@ public class Menu {
                 }
             }
             System.out.println("");
-            System.out.println("------Empieza " +p2n+" ----------");
+            System.out.println("------Turno de " +p2n+" ----------");
             while(J2){
                 int opc;
                 Scanner in = new Scanner(System.in);
@@ -151,6 +151,18 @@ public class Menu {
                         System.out.println("No existe esa opcion. Intentalo de nuevo");
                 }  System.out.println(" ");
             }
+            if(p1.Game() && !p2.Game()){
+                System.out.println("El jugador "+p1n+" ha ganado el juego");
+                Game=false;
+            }
+            else if(!p1.Game() && p2.Game()){
+                System.out.println("El jugador "+p2n+" ha ganado el juego");
+                Game=false;
+            }
+            else if(p1.Game() && p2.Game()){
+                System.out.println("Ambos jugadores pierden");
+                Game=false;
+            }
             fase++;
         }
     }
@@ -162,7 +174,7 @@ public class Menu {
             boolean J1=true, J2=true;
             System.out.println("");
             System.out.println("-----------Fase " +fase+ " -----------");
-            System.out.println("-------Empieza " +p2n+" ---------");
+            System.out.println("-------Turno de " +p2n+" ---------");
             while(J2){
                 int opc;
                 Scanner in = new Scanner(System.in);
@@ -186,7 +198,7 @@ public class Menu {
                 }
             }
             System.out.println("");
-            System.out.println("------Empieza " +p1n+" ----------");
+            System.out.println("------Turno de " +p1n+" ----------");
             while(J1){
                 int opc;
                 Scanner in = new Scanner(System.in);
@@ -207,6 +219,18 @@ public class Menu {
                     default:
                         System.out.println("No existe esa opcion. Intentalo de nuevo");
                 }  System.out.println(" ");
+            }
+            if(p1.Game() && !p2.Game()){
+                System.out.println("El jugador "+p1n+" ha ganado el juego");
+                Game=false;
+            }
+            else if(!p1.Game() && p2.Game()){
+                System.out.println("El jugador "+p2n+" ha ganado el juego");
+                Game=false;
+            }
+            else if(p1.Game() && p2.Game()){
+                System.out.println("Ambos jugadores pierden");
+                Game=false;
             }
             fase++;
         }

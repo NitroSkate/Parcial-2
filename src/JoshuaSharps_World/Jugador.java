@@ -14,7 +14,8 @@ import Paises.*;
  * @author Joshua
  */
 public class Jugador {
-    public int Mad, Pie, Met, Nivel;
+    public double Mad, Pie, Met;
+    public int  Nivel;
     private String nombre;
     
     private ArrayList<Base> baseC = new ArrayList<>();
@@ -26,7 +27,7 @@ public class Jugador {
     }
     
     public int getMad(){
-        return Mad;
+        return (int) Mad;
     }
     
     public void setPie(int Pie){
@@ -34,7 +35,7 @@ public class Jugador {
     }
     
     public int getPie(){
-        return Pie;
+        return (int) Pie;
     }
     
     public void setMet(int Met){
@@ -42,7 +43,7 @@ public class Jugador {
     }
     
     public int getMet(){
-        return Met;
+        return (int) Met;
     }
     
     public void setNivel(int Nivel){
@@ -86,7 +87,8 @@ public class Jugador {
                     setMet(c.getCantRecurso3());
                     System.out.println("Inicias con: "+getMet()+ " de metal");
                     baseC.add(c);
-                    System.out.println(baseC.get(0).getNombre());
+                    System.out.println("");
+                    System.out.println(baseC.get(0).getNombre()+ " es ahora el centro de mando");
                     f=false;
                     break;
                 case 2: 
@@ -104,7 +106,8 @@ public class Jugador {
                     setMet(c2.getCantRecurso3());
                     System.out.println("Inicias con: "+getMet()+ " de metal");
                     baseC.add(c2);
-                    System.out.println(baseC.get(0).getNombre());
+                    System.out.println("");
+                    System.out.println(baseC.get(0).getNombre()+ " es ahora el centro de mando");
                     f=false;
                     break;
                 case 3:
@@ -122,7 +125,8 @@ public class Jugador {
                     setMet(c3.getCantRecurso3());
                     System.out.println("Inicias con: "+getMet()+ " de metal");
                     baseC.add(c3);
-                    System.out.println(baseC.get(0).getNombre());
+                    System.out.println("");
+                    System.out.println(baseC.get(0).getNombre()+ " es ahora el centro de mando");
                     f=false;
                     break;
                 default:
@@ -553,16 +557,123 @@ public class Jugador {
                     }
                     break;
                 case 2:
-                    
+                    MejorarCM();
                     break;
                 case 3:
                     break;
                 case 4:
-                    break;
+                    System.out.println("Seleccione que tipo de edificios");
+                    System.out.println("quiere visualizar");
+                    System.out.println("1. Recursos");
+                    System.out.println("2. Ataque");
+                    System.out.println("3. Centro de mando");
+                    int e;
+                    Scanner en = new Scanner(System.in);
+                    e=en.nextInt();
+                    switch(e){
+                        case 1:
+                            if(!EdificiosR.isEmpty()){
+                                for(int x=0; x<EdificiosR.size();x++){
+                                    System.out.println((x+1)+". "+EdificiosR.get(x).getNombre());
+                                }
+                            }
+                            else{
+                                System.out.println("No hay edificios que generan recursos");
+                            }
+                            break;
+                        case 2:
+                            if(!EdificiosA.isEmpty()){
+                                for(int x=0; x<EdificiosA.size();x++){
+                                    System.out.println((x+1)+". "+EdificiosA.get(x).getNombre());
+                                }
+                            }
+                            else{
+                                System.out.println("No hay edificios que generan recursos");
+                            }
+                            break;
+                        case 3:
+                            for(int x=0; x<baseC.size();x++){
+                                    System.out.println((x+1)+". "+baseC.get(x).getNombre());
+                                }
+                            break;
+                    }
+                break;
                 case 5:
                     oc=false;
                     break;
                 }
             }
         }
+    
+    
+    public void MejorarCM(){
+        double costo;
+        costo = 0.25*(baseC.get(0).getCapRecurso1()+baseC.get(0).getCapRecurso2()+baseC.get(0).getCapRecurso3());
+        if(getNivel()==0 && costo/3<=getMad() && costo/3<=getPie() && costo/3<=getMet()){
+            setNivel(1);
+            setMad((int) (getMad()-costo/3));
+            setPie((int) (getPie()-costo/3));
+            setMet((int) (getMet()-costo/3));
+            baseC.get(0).setCapRecurso1(1.10*baseC.get(0).getCapRecurso1());
+            baseC.get(0).setCapRecurso2(1.10*baseC.get(0).getCapRecurso2());
+            baseC.get(0).setCapRecurso3(1.10*baseC.get(0).getCapRecurso3());
+            System.out.println("La capacidad de madera es ahora de: "+baseC.get(0).getCapRecurso1());
+            System.out.println("La capacidad de piedra es ahora de: "+baseC.get(0).getCapRecurso2());
+            System.out.println("La capacidad de metal es ahora de: "+baseC.get(0).getCapRecurso3());
+            System.out.println("");
+            System.out.println("Tu madera actual es de: "+getMad());
+            System.out.println("Tu piedra actual es de: "+getPie());
+            System.out.println("Tu metal actual es de: "+getMet());
+            System.out.println("");
+            System.out.println("El centro de mando ahora es Nivel 1");
+        }
+        else if(getNivel()==1 && costo/3<=getMad() && costo/3<=getPie() && costo/3<=getMet()){
+            setNivel(2);
+            setMad((int) (getMad()-costo/3));
+            setPie((int) (getPie()-costo/3));
+            setMet((int) (getMet()-costo/3));
+            baseC.get(0).setCapRecurso1(1.30*baseC.get(0).getCapRecurso1());
+            baseC.get(0).setCapRecurso2(1.30*baseC.get(0).getCapRecurso2());
+            baseC.get(0).setCapRecurso3(1.30*baseC.get(0).getCapRecurso3());
+            System.out.println("La capacidad de madera es ahora de: "+baseC.get(0).getCapRecurso1());
+            System.out.println("La capacidad de piedra es ahora de: "+baseC.get(0).getCapRecurso2());
+            System.out.println("La capacidad de metal es ahora de: "+baseC.get(0).getCapRecurso3());
+            System.out.println("");
+            System.out.println("Tu madera actual es de: "+getMad());
+            System.out.println("Tu piedra actual es de: "+getPie());
+            System.out.println("Tu metal actual es de: "+getMet());
+            System.out.println("");
+            System.out.println("El centro de mando ahora es Nivel 2");
+        }
+        else if(getNivel()==2 && costo/3<=getMad() && costo/3<=getPie() && costo/3<=getMet()){
+            setNivel(3);
+            setMad((int) (getMad()-costo/3));
+            setPie((int) (getPie()-costo/3));
+            setMet((int) (getMet()-costo/3));
+            baseC.get(0).setCapRecurso1(1.50*baseC.get(0).getCapRecurso1());
+            baseC.get(0).setCapRecurso2(1.50*baseC.get(0).getCapRecurso2());
+            baseC.get(0).setCapRecurso3(1.50*baseC.get(0).getCapRecurso3());
+            System.out.println("La capacidad de madera es ahora de: "+baseC.get(0).getCapRecurso1());
+            System.out.println("La capacidad de piedra es ahora de: "+baseC.get(0).getCapRecurso2());
+            System.out.println("La capacidad de metal es ahora de: "+baseC.get(0).getCapRecurso3());
+            System.out.println("");
+            System.out.println("Tu madera actual es de: "+getMad());
+            System.out.println("Tu piedra actual es de: "+getPie());
+            System.out.println("Tu metal actual es de: "+getMet());
+            System.out.println("");
+            System.out.println("El centro de mando ahora es Nivel 3");
+        }
+        else if(getNivel()>=3){
+            System.out.println("El nivel del centro de mando ya esta en el maximo");
+        }
+        else{
+            System.out.println("No tiene los recursos suficientes para subir de nivel");
+        }
     }
+    
+    public boolean Game(){
+        if(baseC.isEmpty())
+            return true;
+        return false;
+    }
+}

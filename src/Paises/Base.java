@@ -11,7 +11,8 @@ package Paises;
  */
 public class Base implements BasePlan {
     private String nombre;
-    private int vida, crec1, crec2, crec3, cprec1, cprec2, cprec3;
+    private int vida; 
+    private double crec1, crec2, crec3, cprec1, cprec2, cprec3;
     
     @Override
     public void setNombre(String nombre){
@@ -24,17 +25,17 @@ public class Base implements BasePlan {
     }
 
     @Override
-    public void setCantRecurso1(int crec1) {
+    public void setCantRecurso1(double crec1) {
         this.crec1=crec1;
     }
 
     @Override
-    public void setCantRecurso2(int crec2) {
+    public void setCantRecurso2(double crec2) {
         this.crec2=crec2;
     }
 
     @Override
-    public void setCantRecurso3(int crec3) {
+    public void setCantRecurso3(double crec3) {
         this.crec3=crec3;
     }
 
@@ -50,46 +51,46 @@ public class Base implements BasePlan {
 
     @Override
     public int getCantRecurso1() {
-        return crec1;
+        return (int) crec1;
     }
     @Override
     public int getCantRecurso2() {
-        return crec2;
+        return (int) crec2;
     }
 
     @Override
     public int getCantRecurso3() {
-        return crec3;
+        return (int) crec3;
     }
 
     @Override
-    public void setCapRecurso1(int cprec1) {
+    public void setCapRecurso1(double cprec1) {
         this.cprec1=cprec1;
     }
 
     @Override
-    public void setCapRecurso2(int cprec2) {
+    public void setCapRecurso2(double cprec2) {
         this.cprec2=cprec2;
     }
 
     @Override
-    public void setCapRecurso3(int cprec3) {
+    public void setCapRecurso3(double cprec3) {
         this.cprec3=cprec3;
     }
 
     @Override
     public int getCapRecurso1() {
-        return cprec1;
+        return (int) cprec1;
     }
 
     @Override
     public int getCapRecurso2() {
-        return cprec2;
+        return (int) cprec2;
     }
 
     @Override
     public int getCapRecurso3() {
-        return cprec3;
+        return (int) cprec3;
     }
             
 }

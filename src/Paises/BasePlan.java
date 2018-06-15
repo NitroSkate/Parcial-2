@@ -12,12 +12,12 @@ package Paises;
 public interface BasePlan {
     public void setNombre(String nombre);
     public void setVida(int vida);
-    public void setCantRecurso1(int crec1);
-    public void setCantRecurso2(int crec2);
-    public void setCantRecurso3(int crec3);
-    public void setCapRecurso1(int cprec1);
-    public void setCapRecurso2(int cprec2);
-    public void setCapRecurso3(int cprec3);
+    public void setCantRecurso1(double crec1);
+    public void setCantRecurso2(double crec2);
+    public void setCantRecurso3(double crec3);
+    public void setCapRecurso1(double cprec1);
+    public void setCapRecurso2(double cprec2);
+    public void setCapRecurso3(double cprec3);
     
     public String getNombre();
     public int getVida();
