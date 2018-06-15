@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public class Sourcerer implements SourPlan{
     private String nombre;
     private int vida,rec1,rec2,rec3,fasest, costo1, costo2, costo3;
-    public ArrayList<Sourcerer> sour = new ArrayList<>();
     
     @Override
     public void setNombre(String nombre){

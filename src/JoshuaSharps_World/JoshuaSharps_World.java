@@ -18,14 +18,6 @@ public class JoshuaSharps_World {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*EeuuFact eeuu = new EeuuFact();
-        eeuu.getEeuu("aserradero").build("Pene");
-        Sourcerer edif = eeuu.getEeuu("Aserradero").getSource();
-        System.out.println(edif.getNombre());
-        edif.sour.add(edif);
-        pr.add(edif);
-        System.out.println(pr.get(0).getVida());
-        */
         
         Menu menu;
         menu = Menu.getInstance();
