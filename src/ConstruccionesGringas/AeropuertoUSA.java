@@ -19,9 +19,10 @@ public class AeropuertoUSA implements Eeuu{
     @Override
     public void build(String nombre) {
         AeropuertoUSA.setNombre(nombre);
-        AeropuertoUSA.setVida(0);
-        AeropuertoUSA.setCosto1(0);
-        AeropuertoUSA.setCosto2(0);
+        AeropuertoUSA.setVida(500);
+        AeropuertoUSA.setCosto1(2000);
+        AeropuertoUSA.setCosto2(2000);
+        AeropuertoUSA.setCosto3(2000);
         AeropuertoUSA.setTiempoC(0);
     }
 

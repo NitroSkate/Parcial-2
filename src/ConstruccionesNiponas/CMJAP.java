@@ -20,13 +20,13 @@ public class CMJAP implements Japon{
     @Override
     public void build(String nombre) {
         CMJAP.setNombre(nombre);
-        CMJAP.setVida(0);
-        CMJAP.setCapRecurso1(0);
-        CMJAP.setCapRecurso2(0);
-        CMJAP.setCapRecurso3(0);
-        CMJAP.setCantRecurso1(0);
-        CMJAP.setCantRecurso2(0);
-        CMJAP.setCantRecurso3(0);
+        CMJAP.setVida(2000);
+        CMJAP.setCapRecurso1(10000);
+        CMJAP.setCapRecurso2(5000);
+        CMJAP.setCapRecurso3(3000);
+        CMJAP.setCantRecurso1(3500);
+        CMJAP.setCantRecurso2(2000);
+        CMJAP.setCantRecurso3(500);
     }
 
     @Override

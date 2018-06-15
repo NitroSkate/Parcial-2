@@ -16,6 +16,7 @@ public interface SourPlan {
     public void setFasesT(int fasest);
     public void setCosto1(int costo1);
     public void setCosto2(int costo2);
+    public void setCosto3(int costo3);
     public void setRecurso1(int rec1);
     public void setRecurso2(int rec2);
     public void setRecurso3(int rec3);
@@ -25,6 +26,7 @@ public interface SourPlan {
     public int getFasesT();
     public int getCosto1();
     public int getCosto2();
+    public int getCosto3();
     public int getRecurso1();
     public int getRecurso2();
     public int getRecurso3();

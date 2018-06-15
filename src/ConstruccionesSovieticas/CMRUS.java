@@ -20,13 +20,13 @@ public class CMRUS implements Rusia {
     @Override
     public void build(String nombre) {
         CMRUS.setNombre(nombre);
-        CMRUS.setVida(0);
-        CMRUS.setCapRecurso1(0);
-        CMRUS.setCapRecurso2(0);
-        CMRUS.setCapRecurso3(0);
-        CMRUS.setCantRecurso1(0);
-        CMRUS.setCantRecurso2(0);
-        CMRUS.setCantRecurso3(0);
+        CMRUS.setVida(2000);
+        CMRUS.setCapRecurso1(10000);
+        CMRUS.setCapRecurso2(5000);
+        CMRUS.setCapRecurso3(3000);
+        CMRUS.setCantRecurso1(3500);
+        CMRUS.setCantRecurso2(2000);
+        CMRUS.setCantRecurso3(500);
     }
 
     @Override

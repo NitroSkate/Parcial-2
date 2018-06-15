@@ -19,12 +19,13 @@ public class Fundidora implements Eeuu{
     public void build(String nombre) {
         Fundidora.setNombre(nombre);
         Fundidora.setVida(300);
-        Fundidora.setCosto1(0);
-        Fundidora.setCosto2(0);
-        Fundidora.setFasesT(0);
+        Fundidora.setCosto1(1000);
+        Fundidora.setCosto2(1000);
+        Fundidora.setCosto3(1500);
+        Fundidora.setFasesT(1500);
         Fundidora.setRecurso1(0);
         Fundidora.setRecurso2(0);
-        Fundidora.setRecurso3(500);
+        Fundidora.setRecurso3(1500);
     }
 
     @Override

@@ -20,10 +20,11 @@ public class HQJAP implements Japon {
     @Override
     public void build(String nombre) {
         HQJAP.setNombre(nombre);
-        HQJAP.setVida(0);
+        HQJAP.setVida(300);
         HQJAP.setTiempoC(0);
-        HQJAP.setCosto1(0);
-        HQJAP.setCosto2(0);
+        HQJAP.setCosto1(1000);
+        HQJAP.setCosto2(1000);
+        HQJAP.setCosto3(1000);
     }
 
     @Override

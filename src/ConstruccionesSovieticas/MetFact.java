@@ -22,11 +22,12 @@ public class MetFact implements Rusia {
         MetFact.setNombre(nombre);
         MetFact.setVida(300);
         MetFact.setFasesT(0);
-        MetFact.setCosto1(0);
-        MetFact.setCosto2(0);
+        MetFact.setCosto1(1000);
+        MetFact.setCosto2(1000);
+        MetFact.setCosto3(1500);
         MetFact.setRecurso1(0);
         MetFact.setRecurso2(0);
-        MetFact.setRecurso3(0);
+        MetFact.setRecurso3(1500);
     }
 
     @Override

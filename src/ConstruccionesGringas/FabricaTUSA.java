@@ -18,9 +18,10 @@ public class FabricaTUSA implements Eeuu{
     @Override
     public void build(String nombre) {
         FabricaTUSA.setNombre(nombre);
-        FabricaTUSA.setVida(0);
-        FabricaTUSA.setCosto1(0);
-        FabricaTUSA.setCosto2(0);
+        FabricaTUSA.setVida(400);
+        FabricaTUSA.setCosto1(1500);
+        FabricaTUSA.setCosto2(1000);
+        FabricaTUSA.setCosto3(1000);
         FabricaTUSA.setTiempoC(0);
     }
 

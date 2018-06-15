@@ -19,9 +19,10 @@ public class Bosque implements Rusia {
         Bosque.setNombre(nombre);
         Bosque.setVida(100);
         Bosque.setFasesT(0);
-        Bosque.setCosto1(0);
-        Bosque.setCosto2(0);
-        Bosque.setRecurso1(0);
+        Bosque.setCosto1(2500);
+        Bosque.setCosto2(500);
+        Bosque.setCosto3(0);
+        Bosque.setRecurso1(2000);
         Bosque.setRecurso2(0);
         Bosque.setRecurso3(0);
     }

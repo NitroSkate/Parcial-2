@@ -19,11 +19,12 @@ public class Fabrica implements Eeuu{
     public void build(String nombre) {
         Fabrica.setNombre(nombre);
         Fabrica.setVida(200);
-        Fabrica.setCosto1(0);
-        Fabrica.setCosto2(0);
+        Fabrica.setCosto1(1000);
+        Fabrica.setCosto2(1500);
+        Fabrica.setCosto3(0);
         Fabrica.setFasesT(0);
         Fabrica.setRecurso1(0);
-        Fabrica.setRecurso2(1250);
+        Fabrica.setRecurso2(2500);
         Fabrica.setRecurso3(0);
     }
 

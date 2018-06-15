@@ -28,6 +28,15 @@ public class RusiaFact implements AbstractFact {
                 return new Mezclador();
             case "metfact":
                 return new MetFact();
+            case "cmrus":
+                return new CMRUS();
+            case "aeropuertorus":
+                return new AeropuertoRUS();
+            case "fabricatrus":
+                return new FabricaTRUS();
+            case "hqrus":
+                return new HQRUS();
+                
         }
         return null;
     }

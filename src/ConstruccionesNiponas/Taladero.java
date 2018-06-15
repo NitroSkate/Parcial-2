@@ -22,9 +22,10 @@ public class Taladero implements Japon {
         Taladero.setNombre(nombre);
         Taladero.setVida(100);
         Taladero.setFasesT(0);
-        Taladero.setCosto1(0);
-        Taladero.setCosto2(0);
-        Taladero.setRecurso1(0);
+        Taladero.setCosto1(2500);
+        Taladero.setCosto2(500);
+        Taladero.setCosto3(0);
+        Taladero.setRecurso1(2000);
         Taladero.setRecurso2(0);
         Taladero.setRecurso3(0);
     }

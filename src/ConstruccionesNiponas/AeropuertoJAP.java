@@ -20,10 +20,11 @@ public class AeropuertoJAP implements Japon{
     @Override
     public void build(String nombre) {
         AeropuertoJAP.setNombre(nombre);
-        AeropuertoJAP.setVida(0);
+        AeropuertoJAP.setVida(500);
         AeropuertoJAP.setTiempoC(0);
-        AeropuertoJAP.setCosto1(0);
-        AeropuertoJAP.setCosto2(0);
+        AeropuertoJAP.setCosto1(2000);
+        AeropuertoJAP.setCosto2(2000);
+        AeropuertoJAP.setCosto3(2000);
     }
 
     @Override

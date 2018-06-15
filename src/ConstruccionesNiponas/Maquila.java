@@ -22,10 +22,11 @@ public class Maquila implements Japon {
         Maquila.setNombre(nombre);
         Maquila.setVida(200);
         Maquila.setFasesT(0);
-        Maquila.setCosto1(0);
-        Maquila.setCosto2(0);
+        Maquila.setCosto1(1000);
+        Maquila.setCosto2(1500);
+        Maquila.setCosto3(0);
         Maquila.setRecurso1(0);
-        Maquila.setRecurso2(0);
+        Maquila.setRecurso2(2500);
         Maquila.setRecurso3(0);
     }
     

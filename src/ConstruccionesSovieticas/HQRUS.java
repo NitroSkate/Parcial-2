@@ -20,10 +20,11 @@ public class HQRUS implements Rusia{
     @Override
     public void build(String nombre) {
         HQRUS.setNombre(nombre);
-        HQRUS.setVida(0);
+        HQRUS.setVida(300);
         HQRUS.setTiempoC(0);
-        HQRUS.setCosto1(0);
-        HQRUS.setCosto2(0);
+        HQRUS.setCosto1(1000);
+        HQRUS.setCosto2(1000);
+        HQRUS.setCosto3(1000);
     }
 
     @Override

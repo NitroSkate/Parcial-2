@@ -19,8 +19,9 @@ public class Aserradero implements Eeuu {
     public void build(String nombre){
         Aserradero.setNombre(nombre);
         Aserradero.setVida(100);
-        Aserradero.setCosto1(0);
-        Aserradero.setCosto2(0);
+        Aserradero.setCosto1(2500);
+        Aserradero.setCosto2(500);
+        Aserradero.setCosto3(0);
         Aserradero.setFasesT(0);
         Aserradero.setRecurso1(2000);
         Aserradero.setRecurso2(0);

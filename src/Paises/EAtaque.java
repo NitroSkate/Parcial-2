@@ -11,7 +11,7 @@ package Paises;
  */
 public class EAtaque implements EAtaquePlan {
     private String nombre;
-    private int vida, c1, c2, Tiempo;
+    private int vida, c1, c2, c3, Tiempo;
     
     @Override
     public void setNombre(String nombre){
@@ -31,6 +31,11 @@ public class EAtaque implements EAtaquePlan {
     @Override
     public void setCosto2(int c2) {
         this.c2=c2;
+    }
+    
+    @Override
+    public void setCosto3(int c3){
+        this.c3=c3;
     }
 
     @Override
@@ -57,6 +62,12 @@ public class EAtaque implements EAtaquePlan {
     public int getCosto2() {
         return c2;
     }
+    
+    @Override 
+    public int getCosto3(){
+        return c3;
+    }
+    
     @Override
     public int getTiempoC() {
         return Tiempo;

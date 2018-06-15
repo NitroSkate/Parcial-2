@@ -18,9 +18,10 @@ public class HQUSA implements Eeuu {
     @Override
     public void build(String nombre) {
         HQUSA.setNombre(nombre);
-        HQUSA.setVida(100);
-        HQUSA.setCosto1(0);
-        HQUSA.setCosto2(0);
+        HQUSA.setVida(300);
+        HQUSA.setCosto1(1000);
+        HQUSA.setCosto2(1000);
+        HQUSA.setCosto3(1000);
         HQUSA.setTiempoC(0);
     }
 

@@ -20,11 +20,12 @@ public class Herradero implements Japon {
         Herradero.setNombre(nombre);
         Herradero.setVida(300);
         Herradero.setFasesT(0);
-        Herradero.setCosto1(0);
-        Herradero.setCosto2(0);
+        Herradero.setCosto1(1000);
+        Herradero.setCosto2(1000);
+        Herradero.setCosto3(1500);
         Herradero.setRecurso1(0);
         Herradero.setRecurso2(0);
-        Herradero.setRecurso3(0);
+        Herradero.setRecurso3(1500);
     }
     
     @Override

@@ -22,10 +22,11 @@ public class Mezclador implements Rusia {
         Mezclador.setNombre(nombre);
         Mezclador.setVida(200);
         Mezclador.setFasesT(0);
-        Mezclador.setCosto1(0);
-        Mezclador.setCosto2(0);
+        Mezclador.setCosto1(1000);
+        Mezclador.setCosto2(1500);
+        Mezclador.setCosto3(0);
         Mezclador.setRecurso1(0);
-        Mezclador.setRecurso2(0);
+        Mezclador.setRecurso2(2500);
         Mezclador.setRecurso3(0);
     }
 

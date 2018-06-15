@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Sourcerer implements SourPlan{
     private String nombre;
-    private int vida,rec1,rec2,rec3,fasest, costo1, costo2;
+    private int vida,rec1,rec2,rec3,fasest, costo1, costo2, costo3;
     public ArrayList<Sourcerer> sour = new ArrayList<>();
     
     @Override
@@ -40,6 +40,11 @@ public class Sourcerer implements SourPlan{
     }
     
     @Override
+    public void setCosto3(int costo3){
+        this.costo3=costo3;
+    }
+    
+    @Override
     public void setRecurso1(int rec1){
         this.rec1=rec1;
     }
@@ -54,41 +59,47 @@ public class Sourcerer implements SourPlan{
     
     @Override
     public String getNombre(){
-        return this.nombre;
+        return nombre;
     }
 
     @Override
     public int getVida() {
-        return this.vida;
+        return vida;
     }
 
     @Override
     public int getFasesT() {
-        return this.fasest;
+        return fasest;
     }
 
     @Override
     public int getCosto1() {
-        return this.costo1;
+        return costo1;
     }
 
     @Override
     public int getCosto2() {
-        return this.costo2;
+        return costo2;
+    }
+    
+    @Override
+    public int getCosto3(){
+        return costo3;
+        
     }
     @Override
     public int getRecurso1() {
-        return this.rec1;
+        return rec1;
     }
 
     @Override
     public int getRecurso2() {
-        return this.rec2;
+        return rec2;
     }
 
     @Override
     public int getRecurso3() {
-        return this.rec3;
+        return rec3;
     }
     
 }

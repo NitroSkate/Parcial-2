@@ -22,6 +22,14 @@ public class JaponFact implements AbstractFact{
                 return new Maquila();
             case "herradero":
                 return new Herradero();
+            case "cmjap":
+                return new CMJAP();
+            case "aeropuertojap":
+                return new AeropuertoJAP();
+            case "hqjap":
+                return new HQJAP();
+            case "fabricatjap":
+                return new FabricaTJAP();
         }
         return null;
     }

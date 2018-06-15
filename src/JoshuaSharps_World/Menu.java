@@ -12,6 +12,9 @@ import java.util.Scanner;
  * @author Joshua
  */
 public class Menu {
+    public String p1n;
+    public String p2n;
+    Scanner input = new Scanner(System.in);
     Jugador p1 = new Jugador();
     Jugador p2 = new Jugador();
     
@@ -39,6 +42,7 @@ public class Menu {
             opc = in.nextInt();
             switch(opc){
                 case 1:
+                    TurnoAleatorio();
                     break;
                 case 2:
                     Instrucciones();
@@ -63,14 +67,149 @@ public class Menu {
         System.out.println("Atacar y hacerte con el territorio");
         System.out.println("Las fases se dan cada turno");
         System.out.println("El jugador que se quede sin edificios pierde");
+        System.out.println(" ");
     }
     
-    public void IniciaPrimero(){
+    public void ElegirPais(){
+        System.out.println("--------- Jugador 1----------");
+        System.out.println("Ingrese un usuario:");
+        System.out.println(" ");
+        p1n = input.nextLine();
         System.out.println("------------- Jugador 1 Escoja pais-----------");
-        
+        p1.ElegirPais();
+        System.out.println("--------- Jugador 2----------");
+        System.out.println("Ingrese un usuario:");
+        System.out.println(" ");
+        p2n = input.nextLine();
         System.out.println("");
         System.out.println("------------- Jugador 2 Escoja pais-----------");
-        
-        
+        p2.ElegirPais();
     }
+    
+    public void TurnoAleatorio(){
+        ElegirPais();
+        int random = (int) (Math.random()*2)+1;
+        if (random == 1){
+            EmpiezaJ1();
+        }
+        else{
+            EmpiezaJ2();
+        }
+    }
+    
+    
+    public void EmpiezaJ1(){
+        boolean Game = true;
+        int fase = 1;
+        while(Game){
+            boolean J1=true, J2=true;
+            System.out.println("");
+            System.out.println("-----------Fase " +fase+ " -----------");
+            System.out.println("-------Empieza " +p1n+" ---------");
+            while(J1){
+                int opc;
+                Scanner in = new Scanner(System.in);
+                System.out.println("");
+                System.out.println("1. Construir edificios");
+                System.out.println("2. Atacar/Defender ");
+                System.out.println("3. Terminar el turno ");
+                opc = in.nextInt();
+                switch(opc){
+                    case 1:
+                        p1.MenuConstruir();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        J1=false;
+                        break;
+                    default:
+                        System.out.println("No existe esa opcion. Intentalo de nuevo");
+                        System.out.println(" ");
+                }
+            }
+            System.out.println("");
+            System.out.println("------Empieza " +p2n+" ----------");
+            while(J2){
+                int opc;
+                Scanner in = new Scanner(System.in);
+                System.out.println("");
+                System.out.println("1. Construir edificios");
+                System.out.println("2. Atacar/Defender ");
+                System.out.println("3. Terminar el turno ");
+                opc = in.nextInt();
+                switch(opc){
+                    case 1:
+                        p1.MenuConstruir();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        J2=false;
+                        break;
+                    default:
+                        System.out.println("No existe esa opcion. Intentalo de nuevo");
+                }  System.out.println(" ");
+            }
+            fase++;
+        }
+    }
+    
+        public void EmpiezaJ2(){
+        boolean Game = true;
+        int fase = 1;
+        while(Game){
+            boolean J1=true, J2=true;
+            System.out.println("");
+            System.out.println("-----------Fase " +fase+ " -----------");
+            System.out.println("-------Empieza " +p2n+" ---------");
+            while(J2){
+                int opc;
+                Scanner in = new Scanner(System.in);
+                System.out.println("");
+                System.out.println("1. Construir edificios");
+                System.out.println("2. Atacar/Defender ");
+                System.out.println("3. Terminar el turno ");
+                opc = in.nextInt();
+                switch(opc){
+                    case 1:
+                        p2.MenuConstruir();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        J2=false;
+                        break;
+                    default:
+                        System.out.println("No existe esa opcion. Intentalo de nuevo");
+                        System.out.println(" ");
+                }
+            }
+            System.out.println("");
+            System.out.println("------Empieza " +p1n+" ----------");
+            while(J1){
+                int opc;
+                Scanner in = new Scanner(System.in);
+                System.out.println("");
+                System.out.println("1. Construir edificios");
+                System.out.println("2. Atacar/Defender ");
+                System.out.println("3. Terminar el turno ");
+                opc = in.nextInt();
+                switch(opc){
+                    case 1:
+                        p1.MenuConstruir();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        J1=false;
+                        break;
+                    default:
+                        System.out.println("No existe esa opcion. Intentalo de nuevo");
+                }  System.out.println(" ");
+            }
+            fase++;
+        }
+    }
+    
 }

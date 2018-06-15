@@ -17,13 +17,13 @@ public class CMUSA implements Eeuu {
     @Override
     public void build(String nombre) {
         CMUSA.setNombre(nombre);
-        CMUSA.setVida(0);
-        CMUSA.setCapRecurso1(0);
-        CMUSA.setCapRecurso2(0);
-        CMUSA.setCapRecurso3(0);
-        CMUSA.setCantRecurso1(0);
-        CMUSA.setCantRecurso2(0);
-        CMUSA.setCantRecurso3(0);
+        CMUSA.setVida(2000);
+        CMUSA.setCapRecurso1(10000);
+        CMUSA.setCapRecurso2(5000);
+        CMUSA.setCapRecurso3(3000);
+        CMUSA.setCantRecurso1(3500);
+        CMUSA.setCantRecurso2(2000);
+        CMUSA.setCantRecurso3(500);
     }
 
     @Override

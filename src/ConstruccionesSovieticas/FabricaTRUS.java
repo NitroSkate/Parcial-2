@@ -20,10 +20,11 @@ public class FabricaTRUS implements Rusia{
     @Override
     public void build(String nombre) {
         FabricaTRUS.setNombre(nombre);
-        FabricaTRUS.setVida(0);
+        FabricaTRUS.setVida(400);
         FabricaTRUS.setTiempoC(0);
-        FabricaTRUS.setCosto1(0);
-        FabricaTRUS.setCosto2(0);
+        FabricaTRUS.setCosto1(1500);
+        FabricaTRUS.setCosto2(1000);
+        FabricaTRUS.setCosto3(1000);
     }
 
     @Override

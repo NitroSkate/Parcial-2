@@ -20,10 +20,11 @@ public class FabricaTJAP implements Japon {
     @Override
     public void build(String nombre) {
         FabricaTJAP.setNombre(nombre);
-        FabricaTJAP.setVida(0);
+        FabricaTJAP.setVida(400);
         FabricaTJAP.setTiempoC(0);
-        FabricaTJAP.setCosto1(0);
-        FabricaTJAP.setCosto2(0);
+        FabricaTJAP.setCosto1(1500);
+        FabricaTJAP.setCosto2(1000);
+        FabricaTJAP.setCosto3(1000);
     }
 
     @Override

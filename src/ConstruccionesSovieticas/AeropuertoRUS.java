@@ -20,10 +20,11 @@ public class AeropuertoRUS implements Rusia{
     @Override
     public void build(String nombre) {
         AeropuertoRUS.setNombre(nombre);
-        AeropuertoRUS.setVida(0);
+        AeropuertoRUS.setVida(500);
         AeropuertoRUS.setTiempoC(0);
-        AeropuertoRUS.setCosto1(0);
-        AeropuertoRUS.setCosto2(0);
+        AeropuertoRUS.setCosto1(2000);
+        AeropuertoRUS.setCosto2(2000);
+        AeropuertoRUS.setCosto3(2000);
     }
 
     @Override
